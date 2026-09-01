@@ -47,6 +47,12 @@
                 Silakan masuk ke akun administrator Anda.
             </p>
 
+            @if ($errors->any())
+                <div class="mb-6 p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-md animate-bounce text-center font-medium">
+                    {{ $errors->first() }}
+                </div>
+            @endif
+
             <!-- Form -->
             <form action="{{ route('admin.login.submit') }}" method="POST">
                 @csrf <!-- Laravel CSRF Token -->
