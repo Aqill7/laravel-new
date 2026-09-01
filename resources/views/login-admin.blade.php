@@ -29,39 +29,26 @@
 <body class="font-sans text-gray-800 antialiased bg-[#f8f8f8] flex flex-col min-h-screen">
 
     <!-- Main Content Area -->
-    <main class="flex-grow flex items-center justify-center px-4 py-12">
+    <main class="flex-grow flex items-center justify-center px-4 py-12 relative">
+        <div class="absolute top-6 left-6">
+            <button onclick="history.back()" class="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-brand-green bg-white border border-gray-200 px-3 py-1.5 rounded-lg shadow-sm transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Kembali
+            </button>
+        </div>
         <!-- Login Card -->
-        <div class="bg-white w-full max-w-[400px] p-8 md:p-10 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100">
+        <div id="login-card" class="bg-white w-full max-w-[400px] p-8 md:p-10 rounded-2xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-gray-100">
             
-            <!-- Icon/Logo -->
-            <div class="w-16 h-16 bg-gray-100 rounded-full mx-auto flex items-center justify-center text-brand-green mb-4">
-                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 3l5 8h-3l4 8H6l4-8H7l5-8z" />
-                </svg>
-            </div>
-
             <!-- Titles -->
             <h1 class="text-2xl font-bold text-center text-gray-900 leading-snug mb-2">
-                Selamat Datang<br>Admin
+                Login Admin
             </h1>
             <p class="text-xs text-gray-400 text-center mb-8">
-                Silakan masuk ke akun Anda atau daftar baru.
+                Silakan masuk ke akun administrator Anda.
             </p>
 
-            <!-- Tabs -->
-            <div class="flex border-b border-gray-200 mb-8">
-                <!-- Active Tab: Login -->
-                <button class="w-1/2 pb-3 text-center text-[13px] font-bold text-brand-green border-b-2 border-brand-green">
-                    Login
-                </button>
-                <!-- Inactive Tab: Register -->
-                <button class="w-1/2 pb-3 text-center text-[13px] font-medium text-gray-400 hover:text-gray-600 transition">
-                    Register
-                </button>
-            </div>
-
             <!-- Form -->
-            <form action="#" method="POST">
+            <form action="{{ route('admin.login.submit') }}" method="POST">
                 @csrf <!-- Laravel CSRF Token -->
                 
                 <!-- Email -->
@@ -74,9 +61,27 @@
                 <!-- Password -->
                 <div class="mb-5">
                     <label for="password" class="block text-[11px] font-bold text-gray-700 mb-2">Password</label>
-                    <input type="password" id="password" name="password" placeholder="********" 
-                        class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-[13px] text-gray-700 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition placeholder-gray-300" required>
+                    <div class="relative">
+                        <input type="password" id="password" name="password" placeholder="********" 
+                            class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-[13px] text-gray-700 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition placeholder-gray-300 pr-10" required>
+                        <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 focus:outline-none">
+                            <svg id="eye-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
+                <script>
+                    function togglePassword() {
+                        const passwordInput = document.getElementById('password');
+                        if (passwordInput.type === 'password') {
+                            passwordInput.type = 'text';
+                        } else {
+                            passwordInput.type = 'password';
+                        }
+                    }
+                </script>
 
                 <!-- Remember Me & Forgot Password -->
                 <div class="flex items-center justify-between mb-8 mt-2">
@@ -114,7 +119,7 @@
                 <div>
                     <h4 class="font-bold text-gray-800 mb-3 text-[12px]">Kontak</h4>
                     <ul class="text-[11px] space-y-2">
-                        <li>WhatsApp: 085840058704</li>
+                        <li>WhatsApp: 085640058704</li>
                         <li>Instagram: @twentynine_adv</li>
                     </ul>
                 </div>
@@ -122,7 +127,7 @@
                 <!-- Column 3: Lokasi -->
                 <div>
                     <h4 class="font-bold text-gray-800 mb-3 text-[12px]">Lokasi</h4>
-                    <p class="text-[11px]">Address: Pakintelan, Gunung Pati</p>
+                    <p class="text-[11px]">Address: Gang Durian V, RT/RW 01/01 Pakintelan, Gunung Pati, Semarang, Jawa Tengah</p>
                 </div>
 
                 <!-- Column 4: Legal -->

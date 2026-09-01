@@ -32,11 +32,11 @@
         <a href="#" class="text-xl font-bold text-brand">Twenty Nine Adventure</a>
         
         <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-500">
-            <a href="#" class="hover:text-brand">Home</a>
-            <a href="#" class="hover:text-brand">Katalog</a>
-            <a href="#" class="text-brand border-b-2 border-brand pb-1">Peraturan Sewa</a>
-            <a href="#" class="hover:text-brand">Tentang Kami</a>
-            <a href="#" class="hover:text-brand">Kontak</a>
+            <a href="{{ route('landing') }}" class="hover:text-brand">Home</a>
+            <a href="{{ route('katalog') }}" class="hover:text-brand">Katalog</a>
+            <a href="{{ route('peraturan') }}" class="text-brand border-b-2 border-brand pb-1">Peraturan Sewa</a>
+            <a href="{{ route('tentang') }}" class="hover:text-brand">Tentang Kami</a>
+            <a href="{{ route('kontak') }}" class="hover:text-brand">Kontak</a>
         </div>
 
         <div class="hidden md:flex space-x-3">
@@ -127,7 +127,7 @@
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Siap untuk berpetualang?</h3>
                 <p class="text-gray-500 text-sm">Jelajahi katalog kami dan temukan perlengkapan terbaik untuk perjalanan Anda.</p>
             </div>
-            <a href="#" class="px-6 py-3 bg-brand text-white font-medium rounded-lg hover:bg-green-900 transition text-sm">Lihat Katalog</a>
+            <a href="{{ route('katalog') }}" class="px-6 py-3 bg-brand text-white font-medium rounded-lg hover:bg-green-900 transition text-sm">Lihat Katalog</a>
         </div>
 
     </main>
@@ -144,9 +144,9 @@
             <div>
                 <h4 class="font-bold text-gray-900 mb-4 text-sm">Kontak Kami</h4>
                 <ul class="text-sm text-gray-500 space-y-2">
-                    <li>WhatsApp: 085640558704</li>
+                    <li>WhatsApp: 085640058704</li>
                     <li>Instagram: @twentynine_adv</li>
-                    <li>Address: Pakintelan, Gunung Pati</li>
+                    <li>Address: Gang Durian V, RT/RW 01/01 Pakintelan, Gunung Pati, Semarang, Jawa Tengah</li>
                 </ul>
             </div>
 

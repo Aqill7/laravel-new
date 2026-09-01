@@ -21,18 +21,18 @@
     <nav class="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-50">
         <div class="flex items-center gap-2">
             <!-- Placeholder Logo -->
-            <span class="text-xl font-bold text-brand tracking-tight">Twenty Nine Adventure</span>
+            <a href="{{ route('landing') }}" class="text-xl font-bold text-brand tracking-tight">Twenty Nine Adventure</a>
         </div>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
-            <a href="#" class="hover:text-gray-900">Home</a>
-            <a href="#" class="hover:text-gray-900">Katalog</a>
-            <a href="#" class="hover:text-gray-900">Peraturan Sewa</a>
-            <a href="#" class="hover:text-gray-900">Tentang Kami</a>
-            <a href="#" class="hover:text-gray-900">Kontak</a>
+            <a href="{{ route('landing') }}" class="hover:text-gray-900">Home</a>
+            <a href="{{ route('katalog') }}" class="hover:text-gray-900">Katalog</a>
+            <a href="{{ route('peraturan') }}" class="hover:text-gray-900">Peraturan Sewa</a>
+            <a href="{{ route('tentang') }}" class="hover:text-gray-900">Tentang Kami</a>
+            <a href="{{ route('kontak') }}" class="hover:text-gray-900">Kontak</a>
         </div>
         <div class="flex items-center gap-3">
-            <a href="#" class="border border-gray-300 text-sm font-medium text-gray-700 px-4 py-2 rounded hover:bg-gray-50 transition">Login</a>
-            <a href="#" class="bg-brand text-white text-sm font-medium px-4 py-2 rounded hover:bg-[#0f2e18] transition">Daftar</a>
+            <a href="{{ route('admin.login') }}" class="border border-gray-300 text-sm font-medium text-gray-700 px-4 py-2 rounded hover:bg-gray-50 transition">Login</a>
+            <a href="{{ route('admin.login') }}" class="bg-brand text-white text-sm font-medium px-4 py-2 rounded hover:bg-[#0f2e18] transition">Daftar</a>
         </div>
     </nav>
 
@@ -173,7 +173,7 @@
     <footer class="bg-[#e5e7eb] text-gray-600 py-12 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class="md:col-span-1">
-                <h2 class="text-xl font-bold text-brand mb-2">Twenty Nine<br>Adventure</h2>
+                <h2 class="text-xl font-bold text-brand mb-2"><a href="{{ route('landing') }}">Twenty Nine<br>Adventure</a></h2>
                 <p class="text-xs mt-4 text-gray-500">© 2026 Twenty Nine Adventure. All rights reserved.</p>
             </div>
             
@@ -185,13 +185,13 @@
                     <span class="block text-gray-500 mb-0.5">Instagram: @twentynine_adv</span>
                 </div>
                 <div>
-                    <span class="block text-gray-500">Address: Pakintelan, Gunung Pati</span>
+                    <span class="block text-gray-500">Address: Gang Durian V, RT/RW 01/01 Pakintelan, Gunung Pati, Semarang, Jawa Tengah</span>
                 </div>
             </div>
 
             <div class="space-y-3 text-xs font-medium">
-                <a href="#" class="block text-gray-500 hover:text-gray-900">Privacy Policy</a>
-                <a href="#" class="block text-gray-500 hover:text-gray-900">Terms of Service</a>
+                <a href="{{ route('peraturan') }}" class="block text-gray-500 hover:text-gray-900">Privacy Policy</a>
+                <a href="{{ route('peraturan') }}" class="block text-gray-500 hover:text-gray-900">Terms of Service</a>
             </div>
         </div>
     </footer>

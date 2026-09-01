@@ -36,17 +36,16 @@
 
         <!-- Navigation Links -->
         <div class="hidden md:flex items-center gap-8 text-[13px] font-semibold text-gray-500">
-            <a href="#" class="hover:text-brand-green transition">Home</a>
-            <a href="#" class="hover:text-brand-green transition">Katalog</a>
-            <a href="#" class="hover:text-brand-green transition">Peraturan Sewa</a>
-            <a href="#" class="hover:text-brand-green transition">Tentang Kami</a>
-            <a href="#" class="text-brand-green border-b-2 border-brand-green pb-1">Kontak</a>
+            <a href="{{ route('landing') }}" class="hover:text-brand-green transition">Home</a>
+            <a href="{{ route('katalog') }}" class="hover:text-brand-green transition">Katalog</a>
+            <a href="{{ route('peraturan') }}" class="hover:text-brand-green transition">Peraturan Sewa</a>
+            <a href="{{ route('tentang') }}" class="hover:text-brand-green transition">Tentang Kami</a>
+            <a href="{{ route('kontak') }}" class="text-brand-green border-b-2 border-brand-green pb-1">Kontak</a>
         </div>
 
         <!-- Auth Buttons -->
         <div class="flex items-center gap-4 text-[13px] font-semibold">
-            <a href="#" class="text-gray-700 border border-gray-300 rounded-md px-4 py-1.5 hover:bg-gray-100 transition">Login</a>
-            <a href="#" class="bg-brand-green text-white px-5 py-2 rounded-md hover:bg-green-800 transition">Daftar</a>
+            <a href="{{ route('admin.login') }}" class="text-gray-700 border border-gray-300 rounded-md px-4 py-1.5 hover:bg-gray-100 transition">Login</a>
         </div>
     </nav>
 
@@ -87,8 +86,8 @@
                     </svg>
                 </div>
                 <h3 class="text-base font-bold text-gray-900 mb-1">WhatsApp</h3>
-                <p class="text-xs text-gray-500 mb-6">085840058704</p>
-                <a href="https://wa.me/6285840058704" target="_blank" class="bg-brand-green text-white text-xs font-semibold px-5 py-2.5 rounded-md hover:bg-green-800 transition flex items-center gap-2">
+                <p class="text-xs text-gray-500 mb-6">085640058704</p>
+                <a href="https://wa.me/6285640058704" target="_blank" class="bg-brand-green text-white text-xs font-semibold px-5 py-2.5 rounded-md hover:bg-green-800 transition flex items-center gap-2">
                     <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
                     Chat Sekarang
                 </a>
@@ -140,9 +139,9 @@
             <div>
                 <h4 class="font-bold text-gray-900 mb-3 text-[13px]">Contact</h4>
                 <ul class="text-[12px] text-gray-500 space-y-2">
-                    <li>WhatsApp: 085840058704</li>
+                    <li>WhatsApp: 085640058704</li>
                     <li>Instagram: @twentynine_adv</li>
-                    <li>Address: Pakintelan, Gunung Pati</li>
+                    <li>Address: Gang Durian V, RT/RW 01/01 Pakintelan, Gunung Pati, Semarang, Jawa Tengah</li>
                 </ul>
             </div>
 

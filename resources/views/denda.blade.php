@@ -27,16 +27,15 @@
             <span class="text-xl font-bold text-brand tracking-tight">Twenty Nine Adventure</span>
         </div>
         <div class="hidden md:flex gap-8 text-sm font-medium text-gray-500">
-            <a href="#" class="hover:text-gray-900">Home</a>
-            <a href="#" class="hover:text-gray-900">Katalog</a>
+            <a href="{{ route('landing') }}" class="hover:text-gray-900">Home</a>
+            <a href="{{ route('katalog') }}" class="hover:text-gray-900">Katalog</a>
             <!-- Active Menu -->
-            <a href="#" class="text-brand border-b-2 border-brand pb-1">Peraturan Sewa</a>
-            <a href="#" class="hover:text-gray-900">Tentang Kami</a>
-            <a href="#" class="hover:text-gray-900">Kontak</a>
+            <a href="{{ route('peraturan') }}" class="text-brand border-b-2 border-brand pb-1">Peraturan Sewa</a>
+            <a href="{{ route('tentang') }}" class="hover:text-gray-900">Tentang Kami</a>
+            <a href="{{ route('kontak') }}" class="hover:text-gray-900">Kontak</a>
         </div>
         <div class="flex items-center gap-3">
-            <a href="#" class="border border-gray-300 text-sm font-medium text-gray-700 px-4 py-2 rounded hover:bg-gray-50 transition">Login</a>
-            <a href="#" class="bg-brand text-white text-sm font-medium px-4 py-2 rounded hover:bg-[#15361c] transition">Daftar</a>
+            <a href="{{ route('admin.login') }}" class="border border-gray-300 text-sm font-medium text-gray-700 px-4 py-2 rounded hover:bg-gray-50 transition">Login</a>
         </div>
     </nav>
 
@@ -180,7 +179,7 @@
             <div class="space-y-2 text-xs font-medium">
                 <span class="block text-gray-800 font-bold mb-3 text-sm">Alamat</span>
                 <div>
-                    <span class="block text-gray-500">Address: Pakintelan, Gunung Pati</span>
+                    <span class="block text-gray-500">Address: Gang Durian V, RT/RW 01/01 Pakintelan, Gunung Pati, Semarang, Jawa Tengah</span>
                 </div>
             </div>
 
